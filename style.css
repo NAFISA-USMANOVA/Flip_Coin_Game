@@ -1,0 +1,94 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', 'sans-serif';
+}
+body{
+  height: 100%;
+  background: rgb(58, 164, 164);
+}
+.container{
+  background:white;
+  width: 400px;
+  padding: 32px;
+  border:5px solid rgb(108, 50, 42);/* none*/
+  border-radius: 15px;
+  box-shadow: 15px 15px 50px rgb(137, 85, 85) ;
+  margin:100px auto;
+}
+img{
+  width:80px;
+}
+.coin{
+  height: 150px;
+  width: 150px;
+  position:relative;
+  margin:85px;
+  transform-style: preserve-3d;
+}
+.coin img{
+  width: 100%;
+}
+.heads, .tails{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.tails{
+  transform:rotateX(180deg); /* cambia cara a cruz y viceversa */
+}
+ /* Flip Animation*/
+@keyframes spin-tails{
+    0%{
+      transform: rotateX(0);
+    }
+    100%{
+      transform: rotateX(1980deg);
+    }
+} 
+@keyframes spin-heads {
+  0%{
+    transform:rotateX(0);
+  }
+  100%{
+    transform: rotateX(2160deg);
+  } 
+}
+/* Counter*/
+.counter{
+  display: flex;
+  padding: 20px;
+  margin:20px; 
+  margin-bottom: 40px;
+  font-weight: 500;
+  color:rgb(162, 135, 81); 
+  box-shadow:0px 0px 10px;
+}
+.counter p:nth-last-child(1){
+  margin-left: 50%;
+}
+button{
+  width: 160px;
+  padding: 15px;
+  border: brown;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+#flip_button{
+  background:rgb(137, 85, 85);
+  color:aliceblue;
+}
+#flip_button:disabled{
+  background: #e1e0ee;
+  border-color: #e1e0ee;
+  color:forestgreen;
+}
+#reset_button{
+  background:rgb(210, 196, 169);
+  color:rgb(62, 73, 43);
+}
+ 
+
